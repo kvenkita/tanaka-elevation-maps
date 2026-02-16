@@ -72,7 +72,7 @@ pal_vec <- tidyterra::hypso.colors2(
 )
 
 # pie(rep(1, length(pal_vec)), col = pal_vec)
-# pal <- pal_vec[c(1:6)]
+pal <- pal_vec[c(1:6)]
 # pie(rep(1, length(pal)), col = pal)
 
 light_col <- colorspace::lighten(pal[2], amount = 0.15)
