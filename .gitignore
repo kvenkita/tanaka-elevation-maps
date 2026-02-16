@@ -1,0 +1,43 @@
+```
+# R-specific ignores
+.Rproj.user/
+.Rhistory
+.Rdata
+*.RData
+*.rds
+*.Rds
+*.Rproj
+
+# Dependencies and packages
+library/
+pkg/
+
+# Build artifacts
+*.so
+*.o
+*.dll
+*.dylib
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+```

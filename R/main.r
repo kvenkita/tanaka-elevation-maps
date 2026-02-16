@@ -10,14 +10,14 @@ pacman::p_load(
 # 2. Boundary
 #------------
 country_sf <- geodata::gadm(
-    country = "ITA",
+    country = "IND",
     level = 1, path = tempdir()
 ) |>
     sf::st_as_sf()
 
 tail(country_sf)
 
-region_sf <- subset(country_sf, NAME_1 == "Toscana")
+region_sf <- subset(country_sf, NAME_1 == "Kerala")
 plot(
     sf::st_geometry(country_sf),
     col = "grey70"
@@ -156,13 +156,13 @@ gg_tanaka_hypso <- ggplot(
     ) +
     coord_sf(crs = proj) +
     labs(
-        title = "Tuscany: Digital Elevation Model",
+        title = "Kerala: Digital Elevation Model",
         caption = "Data: Amazon Web Services Tiles"
     ) +
     theme_for_the_win()
 
 ggsave(
-    "tuscany-tanaka-2d.png", gg_tanaka_hypso,
+    "kerala-tanaka-2d.png", gg_tanaka_hypso,
     width = 7, height = 7, bg = "white"
 )
 
@@ -196,7 +196,7 @@ download.file(
 # 10. Final high‐quality PNG
 # --------------------------
 rayshader::render_highquality(
-    filename = "tuscany-tanaka-3d-test.png",
+    filename = "kerala-tanaka-3d.png",
     preview = TRUE,
     light = FALSE,
     environment_light = hdri_file,
